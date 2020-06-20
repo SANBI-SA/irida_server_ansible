@@ -1,0 +1,15 @@
+---
+# sanbi specific, needs to run before Galaxy install
+- hosts: sanbiservers
+  pre_tasks:
+    - name: Set hostname to FQDN
+      hostname:
+        name: "{{ inventory_hostname }}"
+  become: true 
+  roles:
+    - role: sanbi-sa.common
+      tags: "sanbi-common"
+    - role: sanbi-sa.munge
+      tags: "sanbi-munge"
+    - role: sanbi-sa.cephfs-client
+      tags: "sanbi-cephfs-client"
