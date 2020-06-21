@@ -1,6 +1,7 @@
 # Ansible for a SANBI server integrated with the cluster and prepared to run Galaxy for IRIDA
 
-Put the name(s) of the server in the hosts file before using this.
+Put the name(s) of the server in the hosts file before using this. You'll need to liase with
+your friendly SANBI admins to make the required DNS entries.
 
 ## Installing Ansible roles
 
